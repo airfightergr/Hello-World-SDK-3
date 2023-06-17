@@ -5,6 +5,7 @@
 #include "XPLMPlugin.h"
 #include "XPLMDataAccess.h"
 #include "XPLMProcessing.h"
+#include "XPLMUtilities.h"
 #include <string.h>
 #include <stdio.h>
 #include "units_conv.h"
