@@ -15,10 +15,10 @@
 #include <stdio.h>
 #include <time.h>
 #include "units_conv.h"
-#include "../SDK/CHeaders/XPLM/XPLMDataAccess.h"
-#include "../SDK/CHeaders/XPLM/XPLMProcessing.h"
-#include "../SDK/CHeaders/XPLM/XPLMPlugin.h"
-#include "../SDK/CHeaders/XPLM/XPLMUtilities.h"
+#include "XPLMDataAccess.h"
+#include "XPLMProcessing.h"
+#include "XPLMPlugin.h"
+#include "XPLMUtilities.h"
 
 #define KNOTS_TO_KMH = 1.852;
 
