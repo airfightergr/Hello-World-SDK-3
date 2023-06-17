@@ -10,7 +10,7 @@ on:
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: RelWithDebInfo
+  BUILD_TYPE: Release
 
 jobs:
   build:
@@ -69,24 +69,24 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: binaries
-          path: HelloWorldSdk3/64
+          path: avanti/lin_x64
 
       - uses: actions/upload-artifact@v2
         with:
-          name: HelloWorldSdk3_plugin
+          name: avanti_plugin
           path: |
-            ${{github.workspace}}/HelloWorldSdk3*
+            ${{github.workspace}}/avanti*
           if-no-files-found: error
 
       - name: Create plugin archive
         if: github.event_name == 'release'
-        run: zip -r HelloWorldSdk3.zip HelloWorldSdk3/
+        run: zip -r avanti.zip avanti/
 
       - name: Upload binaries to release
         if: github.event_name == 'release'
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: HelloWorldSdk3.zip
+          file: avanti.zip
           tag: ${{ github.ref }}
           overwrite: true

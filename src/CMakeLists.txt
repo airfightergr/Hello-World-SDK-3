@@ -6,7 +6,7 @@
 #   * -DCREATECOMPLETEEDITION=XXX, where XXX is true or false. Default is true.
 
 cmake_minimum_required(VERSION 3.9)
-project(plugin VERSION 1.0.0 DESCRIPTION "Hello World SDK 3 X-Plane plugin")
+project(avanti VERSION 1.0.0)
 
 # X-Plane supports OS X 10.10+, so this should ensure FlyWithLua can run on
 # all supported versions.
@@ -65,7 +65,7 @@ add_compile_options(-O3 -fPIC)
 # FIXME: Split this into individual targets.
 list(APPEND PLUGIN_SRCS Hello-World-SDK-3.cpp)
 
-add_library(plugin SHARED ${PLUGIN_SRCS})
+add_library(plugin SHARED ${PLUGIN_SRCS} units_conv.cpp units_conv.h)
 
 target_compile_features(plugin PUBLIC cxx_std_11)
 
