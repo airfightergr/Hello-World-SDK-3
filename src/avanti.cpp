@@ -78,7 +78,7 @@ PLUGIN_API int XPluginStart(
 
 
 //time stamp and print to Log.txt
-    snprintf(myValue_buffer, 256, "[P-180 Avanti II]: Plugin loaded!\n");
+    sprintf(myValue_buffer, "[P-180 Avanti II]: Plugin loaded!\n");
     XPLMDebugString(myValue_buffer);
 
 //register the callback
