@@ -6,6 +6,8 @@
 #include "XPLMDataAccess.h"
 #include "XPLMProcessing.h"
 #include <string.h>
+#include "units_conv.h"
+
 #if IBM
 	#include <windows.h>
 #endif
@@ -76,11 +78,7 @@ PLUGIN_API int XPluginStart(
 
 
 //time stamp and print to Log.txt
-
-    time_t now = 0;
-    tm *ltm = localtime(&now);
-
-    snprintf(myValue_buffer, 256, "%d-%02d-%02d %02d:%02d:%02d [P-180 Avanti II]: Plugin loaded!\n", 1900 + ltm->tm_year, 1 + ltm->tm_mon, ltm->tm_mday, ltm->tm_hour, ltm->tm_min, ltm->tm_sec);
+    snprintf(myValue_buffer, 256, "[P-180 Avanti II]: Plugin loaded!\n");
     XPLMDebugString(myValue_buffer);
 
 //register the callback
