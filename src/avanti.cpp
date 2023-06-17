@@ -6,6 +6,7 @@
 #include "XPLMDataAccess.h"
 #include "XPLMProcessing.h"
 #include <string.h>
+#include <stdio.h>
 #include "units_conv.h"
 
 #if IBM
