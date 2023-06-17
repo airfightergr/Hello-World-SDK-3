@@ -1,4 +1,4 @@
-# Hello World SDK 3 build script.
+# Hello World SDK 3 build script. Adapted for my Avanti.
 #
 # Useful command line flags:
 #   * -DCMAKE_BUILD_TYPE=XXX, where XXX is one of Debug, Release,
@@ -63,7 +63,7 @@ add_compile_options(-O3 -fPIC)
 
 # X-Plane plugin
 # FIXME: Split this into individual targets.
-list(APPEND PLUGIN_SRCS Hello-World-SDK-3.cpp)
+list(APPEND PLUGIN_SRCS avanti.cpp)
 
 add_library(plugin SHARED ${PLUGIN_SRCS} units_conv.cpp units_conv.h)
 
