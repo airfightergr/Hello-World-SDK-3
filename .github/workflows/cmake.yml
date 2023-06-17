@@ -7,6 +7,13 @@ on:
     branches: [ "*" ]
   release:
     type: [created, edited]
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: "Log Level"
+        required: false
+        default: "warning"
+
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
